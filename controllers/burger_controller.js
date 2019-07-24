@@ -24,7 +24,11 @@ router.get('/', function (req, res) {
     })
 });
 
-
+router.post('/api/burger', function(req, res){
+    Burgers.create(req.body).then(function (data){
+        res.status(201).end
+    })
+})
 
 
 module.exports = router;
