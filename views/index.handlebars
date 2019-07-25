@@ -17,7 +17,7 @@
             {{#each burgers}}
             <div id="non-devoured" class="burgers p-2 my-1">
                 {{id}}. {{burger_name}}
-                <button class="burgerBtn"><i class="fas fa-hamburger"></i></button>
+                <button class="burgerBtn" name={{id}}><i class="fas fa-hamburger"></i></button>
             </div>
             {{/each}}
         </div>
@@ -37,7 +37,7 @@
             {{#each devoured}}
             <div id="devoured" class="burgers p-2 my-1">
                 {{id}}. {{burger_name}}
-                <button class="burgerBtn"><i class="fa fa-trash-o"></i></button>
+                <button class="burgerBtn" name={{id}}><i class="fa fa-trash-o"></i></button>
             </div>
             {{/each}}
         </div>

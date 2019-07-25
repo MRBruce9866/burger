@@ -26,9 +26,37 @@ router.get('/', function (req, res) {
 
 router.post('/api/burger', function(req, res){
     Burgers.create(req.body).then(function (data){
-        res.status(201).end
+        res.status(201).end();
     })
 })
 
+router.post('/api/burger/eat', function(req, res){
+
+    var id = req.body.id;
+    
+    Burgers.update({
+        devoured: true
+    },
+    {
+        where: {
+            id:id
+        }
+    }).then(function (data){
+        res.status(202).end();
+    })
+})
+
+router.post('/api/burger/remove', function(req, res){
+
+    var id = req.body.id;
+    
+    Burgers.destroy({
+        where: {
+            id:id
+        }
+    }).then(function (){
+        res.status(204).end();
+    })
+})
 
 module.exports = router;
