@@ -24,4 +24,22 @@ $(document).ready(function () {
         })
     })
 
+    $('#createBurger').on('click', function (event){
+        event.preventDefault();
+
+        var name = $('#burgerName').val();
+
+        if(name){
+            $.post('/api/burger/add', {
+                name: name
+            }, function (data) {
+                console.log(data);
+    
+                location.reload();
+            })
+        }
+
+        
+    })
+
 });

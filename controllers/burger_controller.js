@@ -24,8 +24,8 @@ router.get('/', function (req, res) {
     })
 });
 
-router.post('/api/burger', function(req, res){
-    Burgers.create(req.body).then(function (data){
+router.post('/api/burger/add', function(req, res){
+    Burgers.create({burger_name:req.body.name}).then(function (data){
         res.status(201).end();
     })
 })
