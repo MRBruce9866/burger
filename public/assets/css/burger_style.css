@@ -1,20 +1,48 @@
-body{
+body {
+    color: #333;
     background: #fa4;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
 .burgers{
+    
     position: relative;
     font-size: 16px;
-    border: 2px solid black;
-    background: white;
 }
 
-.burgerBtn{
+.mainSection{
+    border: 2px solid #0001;
+    background: #0001;
+}
+
+
+#devoured {
+    border: 2px solid #ddd;
+    background: linear-gradient(45deg, #ddd, #fff, #ddd);
+}
+
+#non-devoured {
+    border: 2px solid #ddd;
+    background: linear-gradient(45deg, #ddd, #fff, #ddd);
+}
+
+
+.burgerBtn {
     position: absolute;
     top: 12%;
     left: 85%;
+}
+
+#devoured .burgerBtn{
+    border: 2px solid #a66;
+    background: linear-gradient(45deg, #955, #c99, #955);
+    
+}
+
+#non-devoured .burgerBtn{
+    border: 2px solid #6aa;
+    background: linear-gradient(45deg, #599, #9cc, #599);
 }
