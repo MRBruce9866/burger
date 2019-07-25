@@ -1,15 +1,43 @@
-<ul>
-    {{#each burgers}}
-    <li>
-        <p>{{burger_name}}</p>
-    </li>
-    {{/each}}
-</ul>
-<hr>
-<ul>
-    {{#each devoured}}
-    <li>
-        <p>{{burger_name}}</p>
-    </li>
-    {{/each}}
-</ul>
+<div class="container my-3">
+    <div class="row text-center">
+        <div class="col-12">
+            <h1>EAT-DA-BURGER</h1>
+            <p>Pick a burger to devour!</p>
+            <img src="assets/img/burger.png" height='250px'>
+        </div>
+
+    </div>
+    <div class="row my-5">
+        <div class='col-3'>
+            <h5 class="text-center">Fresh New Burgers</h5>
+            <hr>
+            {{#each burgers}}
+            <div id="non-devoured" class="burgers p-2 my-1">
+                {{id}}. {{burger_name}}
+                <button class="burgerBtn"><i class="fas fa-hamburger"></i></button>
+            </div>
+            {{/each}}
+        </div>
+        <div class="col-6 text-center">
+            <form>
+                <div class="form-group">
+                    <label for="addBurger">Add a new burger</label>
+                    <hr>
+                    <input type="text" class="form-control" id="addBurger">
+                </div>
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+        </div>
+        <div class='col-3'>
+            <h5 class="text-center">Devoured Burgers</h5>
+            <hr>
+            {{#each devoured}}
+            <div id="devoured" class="burgers p-2 my-1">
+                {{id}}. {{burger_name}}
+                <button class="burgerBtn"><i class="fa fa-trash-o"></i></button>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+
+</div>

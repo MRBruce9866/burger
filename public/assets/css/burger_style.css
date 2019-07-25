@@ -1,3 +1,20 @@
 body{
     background: #fa4;
 }
+
+ul{
+    list-style: none;
+}
+
+.burgers{
+    position: relative;
+    font-size: 16px;
+    border: 2px solid black;
+    background: white;
+}
+
+.burgerBtn{
+    position: absolute;
+    top: 12%;
+    left: 85%;
+}
