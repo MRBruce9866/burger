@@ -30,7 +30,7 @@ router.post('/api/burger/add', function(req, res){
     })
 })
 
-router.post('/api/burger/eat', function(req, res){
+router.put('/api/burger/eat', function(req, res){
 
     var id = req.body.id;
     
@@ -46,7 +46,7 @@ router.post('/api/burger/eat', function(req, res){
     })
 })
 
-router.post('/api/burger/remove', function(req, res){
+router.delete('/api/burger/remove', function(req, res){
 
     var id = req.body.id;
     
