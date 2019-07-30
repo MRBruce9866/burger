@@ -14,7 +14,7 @@
         <div class='col-3'>
             <h5 class="text-center">Fresh New Burgers</h5>
             <hr>
-            {{#each burgers}}
+            {{#each nonDevoured}}
             <div id="non-devoured" class="burgers p-2 my-1">
                 {{id}}. {{burger_name}}
                 <button class="burgerBtn" name={{id}}><i class="fas fa-hamburger"></i></button>
